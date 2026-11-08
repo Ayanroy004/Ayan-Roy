@@ -1,0 +1,349 @@
+@import "tailwindcss";
+
+@layer base {
+  /* 01. Default: Deep Charcoal Theme */
+  :root,
+  [data-theme="charcoal"] {
+    --bg-primary: #0B0D10;
+    --bg-secondary: #11151B;
+    --bg-surface: #141922;
+    --bg-surface-elevated: #161B23;
+    --bg-surface-subtle: rgba(14, 18, 24, 0.45);
+    --bg-bar: #0A0D12;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-card: rgba(255, 255, 255, 0.08);
+    --border-highlight: rgba(56, 189, 248, 0.35);
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --text-muted: #94A3B8;
+    --accent: #38BDF8;
+    --accent-secondary: #818CF8;
+    --accent-glow: rgba(56, 189, 248, 0.18);
+    --scrollbar-thumb: #1E2530;
+    --scrollbar-track: #0B0D10;
+    --selection-bg: rgba(56, 189, 248, 0.25);
+    --selection-text: #BAE6FD;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  /* 02. High-Contrast: Midnight Cobalt Theme */
+  [data-theme="midnight"] {
+    --bg-primary: #050B18;
+    --bg-secondary: #0A152E;
+    --bg-surface: #0D1C3D;
+    --bg-surface-elevated: #132650;
+    --bg-surface-subtle: rgba(10, 21, 46, 0.55);
+    --bg-bar: #040813;
+    --border-subtle: rgba(147, 197, 253, 0.16);
+    --border-card: rgba(147, 197, 253, 0.22);
+    --border-highlight: rgba(96, 165, 250, 0.5);
+    --text-primary: #FFFFFF;
+    --text-secondary: #E2E8F0;
+    --text-muted: #93C5FD;
+    --accent: #60A5FA;
+    --accent-secondary: #38BDF8;
+    --accent-glow: rgba(96, 165, 250, 0.28);
+    --scrollbar-thumb: #1E3A8A;
+    --scrollbar-track: #050B18;
+    --selection-bg: rgba(96, 165, 250, 0.35);
+    --selection-text: #EFF6FF;
+  }
+
+  /* 03. High-Contrast: Emerald Matrix Theme */
+  [data-theme="emerald"] {
+    --bg-primary: #060F0C;
+    --bg-secondary: #0B1B15;
+    --bg-surface: #0E241D;
+    --bg-surface-elevated: #123026;
+    --bg-surface-subtle: rgba(11, 27, 21, 0.55);
+    --bg-bar: #040A08;
+    --border-subtle: rgba(110, 231, 183, 0.16);
+    --border-card: rgba(110, 231, 183, 0.22);
+    --border-highlight: rgba(16, 185, 129, 0.5);
+    --text-primary: #FFFFFF;
+    --text-secondary: #E6F4EA;
+    --text-muted: #A7F3D0;
+    --accent: #10B981;
+    --accent-secondary: #34D399;
+    --accent-glow: rgba(16, 185, 129, 0.28);
+    --scrollbar-thumb: #064E3B;
+    --scrollbar-track: #060F0C;
+    --selection-bg: rgba(16, 185, 129, 0.35);
+    --selection-text: #ECFDF5;
+  }
+
+  /* 04. High-Contrast: Violet Nebula Theme */
+  [data-theme="violet"] {
+    --bg-primary: #0D0917;
+    --bg-secondary: #161026;
+    --bg-surface: #1E1736;
+    --bg-surface-elevated: #281F47;
+    --bg-surface-subtle: rgba(22, 16, 38, 0.55);
+    --bg-bar: #090610;
+    --border-subtle: rgba(216, 180, 254, 0.16);
+    --border-card: rgba(216, 180, 254, 0.22);
+    --border-highlight: rgba(192, 132, 252, 0.5);
+    --text-primary: #FFFFFF;
+    --text-secondary: #F3E8FF;
+    --text-muted: #D8B4FE;
+    --accent: #C084FC;
+    --accent-secondary: #F472B6;
+    --accent-glow: rgba(192, 132, 252, 0.28);
+    --scrollbar-thumb: #581C87;
+    --scrollbar-track: #0D0917;
+    --selection-bg: rgba(192, 132, 252, 0.35);
+    --selection-text: #FAF5FF;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Scrollbar syncing with active theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  filter: brightness(1.25);
+}
+
+/* Subtle ambient glow effects */
+.radial-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(56, 189, 248, 0.08) 0%, rgba(99, 102, 241, 0.04) 40%, transparent 70%);
+}
+[data-theme="midnight"] .radial-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(96, 165, 250, 0.16) 0%, rgba(37, 99, 235, 0.08) 45%, transparent 75%);
+}
+[data-theme="emerald"] .radial-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(16, 185, 129, 0.15) 0%, rgba(5, 150, 105, 0.07) 45%, transparent 75%);
+}
+[data-theme="violet"] .radial-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(192, 132, 252, 0.16) 0%, rgba(236, 72, 153, 0.08) 45%, transparent 75%);
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 25px -5px var(--accent-glow);
+}
+
+/* Dynamic text gradients per theme */
+.text-gradient {
+  background: linear-gradient(135deg, #38BDF8 0%, #818CF8 50%, #C084FC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+[data-theme="midnight"] .text-gradient {
+  background: linear-gradient(135deg, #60A5FA 0%, #38BDF8 50%, #818CF8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+[data-theme="emerald"] .text-gradient {
+  background: linear-gradient(135deg, #34D399 0%, #10B981 50%, #06B6D4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+[data-theme="violet"] .text-gradient {
+  background: linear-gradient(135deg, #C084FC 0%, #E879F9 50%, #F472B6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===================================================
+   AUTOMATIC MAPPINGS FOR ALL 4 THEMES
+   =================================================== */
+
+/* 1. Midnight Blue mappings */
+[data-theme="midnight"] .bg-\[\#0B0D10\],
+[data-theme="midnight"].bg-\[\#0B0D10\] {
+  background-color: var(--bg-primary) !important;
+}
+[data-theme="midnight"] .bg-\[\#11151B\] {
+  background-color: var(--bg-secondary) !important;
+}
+[data-theme="midnight"] .bg-\[\#141922\],
+[data-theme="midnight"] .bg-\[\#161B23\] {
+  background-color: var(--bg-surface-elevated) !important;
+}
+[data-theme="midnight"] .bg-\[\#171D27\],
+[data-theme="midnight"] .bg-\[\#1A202A\] {
+  background-color: #172B57 !important;
+}
+[data-theme="midnight"] .bg-\[\#0E1218\],
+[data-theme="midnight"] .bg-\[\#0E1218\]\/40 {
+  background-color: var(--bg-surface-subtle) !important;
+}
+[data-theme="midnight"] .bg-\[\#0A0D12\],
+[data-theme="midnight"] .bg-\[\#0D1016\] {
+  background-color: var(--bg-bar) !important;
+}
+[data-theme="midnight"] .bg-\[\#0F131A\] {
+  background-color: #081126 !important;
+}
+[data-theme="midnight"] .bg-\[\#0F1319\]\/95 {
+  background-color: rgba(10, 21, 46, 0.95) !important;
+}
+[data-theme="midnight"] .border-white\/\[0\.08\],
+[data-theme="midnight"] .border-white\/\[0\.06\],
+[data-theme="midnight"] .border-white\/\[0\.04\],
+[data-theme="midnight"] .border-white\/10 {
+  border-color: var(--border-card) !important;
+}
+[data-theme="midnight"] .text-sky-400 {
+  color: #60A5FA !important;
+}
+[data-theme="midnight"] .bg-sky-500 {
+  background-color: #3B82F6 !important;
+}
+[data-theme="midnight"] .hover\:bg-sky-400:hover {
+  background-color: #60A5FA !important;
+}
+[data-theme="midnight"] .border-sky-500\/30,
+[data-theme="midnight"] .border-sky-500\/20,
+[data-theme="midnight"] .border-sky-400 {
+  border-color: rgba(96, 165, 250, 0.4) !important;
+}
+[data-theme="midnight"] .bg-sky-500\/10,
+[data-theme="midnight"] .bg-sky-500\/15 {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+}
+
+/* 2. Emerald Matrix mappings */
+[data-theme="emerald"] .bg-\[\#0B0D10\],
+[data-theme="emerald"].bg-\[\#0B0D10\] {
+  background-color: var(--bg-primary) !important;
+}
+[data-theme="emerald"] .bg-\[\#11151B\] {
+  background-color: var(--bg-secondary) !important;
+}
+[data-theme="emerald"] .bg-\[\#141922\],
+[data-theme="emerald"] .bg-\[\#161B23\] {
+  background-color: var(--bg-surface-elevated) !important;
+}
+[data-theme="emerald"] .bg-\[\#171D27\],
+[data-theme="emerald"] .bg-\[\#1A202A\] {
+  background-color: #17382D !important;
+}
+[data-theme="emerald"] .bg-\[\#0E1218\],
+[data-theme="emerald"] .bg-\[\#0E1218\]\/40 {
+  background-color: var(--bg-surface-subtle) !important;
+}
+[data-theme="emerald"] .bg-\[\#0A0D12\],
+[data-theme="emerald"] .bg-\[\#0D1016\] {
+  background-color: var(--bg-bar) !important;
+}
+[data-theme="emerald"] .bg-\[\#0F131A\] {
+  background-color: #0A1C16 !important;
+}
+[data-theme="emerald"] .bg-\[\#0F1319\]\/95 {
+  background-color: rgba(11, 27, 21, 0.95) !important;
+}
+[data-theme="emerald"] .border-white\/\[0\.08\],
+[data-theme="emerald"] .border-white\/\[0\.06\],
+[data-theme="emerald"] .border-white\/\[0\.04\],
+[data-theme="emerald"] .border-white\/10 {
+  border-color: var(--border-card) !important;
+}
+[data-theme="emerald"] .text-sky-400 {
+  color: #34D399 !important;
+}
+[data-theme="emerald"] .bg-sky-500 {
+  background-color: #10B981 !important;
+}
+[data-theme="emerald"] .hover\:bg-sky-400:hover {
+  background-color: #34D399 !important;
+}
+[data-theme="emerald"] .border-sky-500\/30,
+[data-theme="emerald"] .border-sky-500\/20,
+[data-theme="emerald"] .border-sky-400 {
+  border-color: rgba(16, 185, 129, 0.4) !important;
+}
+[data-theme="emerald"] .bg-sky-500\/10,
+[data-theme="emerald"] .bg-sky-500\/15 {
+  background-color: rgba(16, 185, 129, 0.15) !important;
+}
+
+/* 3. Violet Nebula mappings */
+[data-theme="violet"] .bg-\[\#0B0D10\],
+[data-theme="violet"].bg-\[\#0B0D10\] {
+  background-color: var(--bg-primary) !important;
+}
+[data-theme="violet"] .bg-\[\#11151B\] {
+  background-color: var(--bg-secondary) !important;
+}
+[data-theme="violet"] .bg-\[\#141922\],
+[data-theme="violet"] .bg-\[\#161B23\] {
+  background-color: var(--bg-surface-elevated) !important;
+}
+[data-theme="violet"] .bg-\[\#171D27\],
+[data-theme="violet"] .bg-\[\#1A202A\] {
+  background-color: #2D1F4F !important;
+}
+[data-theme="violet"] .bg-\[\#0E1218\],
+[data-theme="violet"] .bg-\[\#0E1218\]\/40 {
+  background-color: var(--bg-surface-subtle) !important;
+}
+[data-theme="violet"] .bg-\[\#0A0D12\],
+[data-theme="violet"] .bg-\[\#0D1016\] {
+  background-color: var(--bg-bar) !important;
+}
+[data-theme="violet"] .bg-\[\#0F131A\] {
+  background-color: #18112C !important;
+}
+[data-theme="violet"] .bg-\[\#0F1319\]\/95 {
+  background-color: rgba(22, 16, 38, 0.95) !important;
+}
+[data-theme="violet"] .border-white\/\[0\.08\],
+[data-theme="violet"] .border-white\/\[0\.06\],
+[data-theme="violet"] .border-white\/\[0\.04\],
+[data-theme="violet"] .border-white\/10 {
+  border-color: var(--border-card) !important;
+}
+[data-theme="violet"] .text-sky-400 {
+  color: #C084FC !important;
+}
+[data-theme="violet"] .bg-sky-500 {
+  background-color: #A855F7 !important;
+}
+[data-theme="violet"] .hover\:bg-sky-400:hover {
+  background-color: #C084FC !important;
+}
+[data-theme="violet"] .border-sky-500\/30,
+[data-theme="violet"] .border-sky-500\/20,
+[data-theme="violet"] .border-sky-400 {
+  border-color: rgba(192, 132, 252, 0.4) !important;
+}
+[data-theme="violet"] .bg-sky-500\/10,
+[data-theme="violet"] .bg-sky-500\/15 {
+  background-color: rgba(168, 85, 247, 0.15) !important;
+}
+
+/* Subtle Aurora Ambient Animated Backlight */
+@keyframes ambientShift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.18;
+  }
+  50% {
+    transform: translate(30px, -20px) scale(1.1);
+    opacity: 0.28;
+  }
+}
+
+.aurora-glow {
+  animation: ambientShift 12s ease-in-out infinite alternate;
+  filter: blur(80px);
+}

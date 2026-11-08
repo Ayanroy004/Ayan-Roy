@@ -1,0 +1,146 @@
+%PDF-1.4
+1 0 obj
+<<
+  /Type /Catalog
+  /Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+  /Type /Pages
+  /Kids [3 0 R]
+  /Count 1
+>>
+endobj
+3 0 obj
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [0 0 595.28 841.89]
+  /Contents 4 0 R
+  /Resources <<
+    /Font <<
+      /F1 5 0 R
+      /F2 6 0 R
+    >>
+  >>
+>>
+endobj
+4 0 obj
+<<
+  /Length 1250
+>>
+stream
+BT
+/F1 22 Tf
+50 780 Td
+(AYAN ROY) Tj
+/F2 11 Tf
+0 -18 Td
+(Full-Stack Developer | MCA Student | West Bengal, India) Tj
+0 -14 Td
+(Email: ayan20045roy@gmail.com | GitHub: github.com/ayan-roy | LinkedIn: linkedin.com/in/ayan-roy) Tj
+0 -25 Td
+/F1 13 Tf
+(PROFESSIONAL SUMMARY) Tj
+/F2 10 Tf
+0 -15 Td
+(Passionate Full-Stack Developer and MCA student who enjoys building modern, scalable, and) Tj
+0 -13 Td
+(user-friendly web applications. Experienced with frontend and backend technologies, developing) Tj
+0 -13 Td
+(real-world projects, and continuously improving problem-solving and programming skills.) Tj
+0 -24 Td
+/F1 13 Tf
+(EDUCATION) Tj
+/F1 11 Tf
+0 -16 Td
+(Master of Computer Applications (MCA) - Currently Pursuing) Tj
+/F2 10 Tf
+0 -13 Td
+(Advanced studies in computer applications, software development, programming, and computer science.) Tj
+/F1 11 Tf
+0 -16 Td
+(Bachelor of Computer Applications (BCA) - Completed) Tj
+/F2 10 Tf
+0 -13 Td
+(Built a foundation in programming, computer applications, database management, and web development.) Tj
+0 -24 Td
+/F1 13 Tf
+(TECHNICAL SKILLS) Tj
+/F2 10 Tf
+0 -15 Td
+(Frontend: HTML5, CSS3, JavaScript, React.js, Next.js, Tailwind CSS) Tj
+0 -13 Td
+(Backend: Node.js, Express.js, Java, PHP | Databases: MongoDB, MySQL) Tj
+0 -13 Td
+(Programming & CS: C, Java, Data Structures and Algorithms, OOP, Problem Solving) Tj
+0 -13 Td
+(Tools: Git, GitHub, VS Code, Postman) Tj
+0 -24 Td
+/F1 13 Tf
+(FEATURED PROJECTS) Tj
+/F1 11 Tf
+0 -15 Td
+(SmartKrishi - Agricultural Marketplace (React.js, Spring Boot, Java, MySQL)) Tj
+/F2 10 Tf
+0 -13 Td
+(Web-based agricultural marketplace connecting farmers and wholesalers, exploring products and mandi prices.) Tj
+/F1 11 Tf
+0 -15 Td
+(Vitality Physiotherapy Website (React.js, Node.js, Express.js, MongoDB)) Tj
+/F2 10 Tf
+0 -13 Td
+(Responsive clinic portal for showcasing rehabilitation services, therapist schedules, and appointment requests.) Tj
+/F1 11 Tf
+0 -15 Td
+(Wedding Invitation Web Application (React.js, Vite, JavaScript, Google Sheets)) Tj
+/F2 10 Tf
+0 -13 Td
+(Interactive multilingual wedding invitation with multi-page flow and synced Google Sheets RSVP tracking.) Tj
+/F1 11 Tf
+0 -15 Td
+(Emotion Classification System (Python, Flask, TensorFlow/Keras, ML)) Tj
+/F2 10 Tf
+0 -13 Td
+(Machine learning project analyzing facial expressions and classifying emotions using a trained neural network.) Tj
+/F1 11 Tf
+0 -15 Td
+(PVC ID Card Generator (React.js, Flask, Python)) Tj
+/F2 10 Tf
+0 -13 Td
+(Web-based ID card generator tool to create, design and manage printable PVC ID cards with barcodes and QR codes.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /Helvetica-Bold
+>>
+endobj
+6 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /Helvetica
+>>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000266 00000 n 
+0000001570 00000 n 
+0000001650 00000 n 
+trailer
+<<
+  /Size 7
+  /Root 1 0 R
+>>
+startxref
+1725
+%%EOF
