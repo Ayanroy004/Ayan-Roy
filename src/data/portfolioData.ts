@@ -1,3 +1,6 @@
+import wedding from '../assets/images/Wedding.jpeg';
+import emotion from '../assets/images/Emotion.jpeg'
+
 export interface Project {
   id: string;
   title: string;
@@ -137,6 +140,7 @@ export const portfolioData = {
         { name: 'Express.js', icon: 'express' },
         { name: 'Java', icon: 'java' },
         { name: 'PHP', icon: 'php' },
+        { name: 'Spring Boot', icon: 'spring' },
       ],
     },
     {
@@ -153,6 +157,7 @@ export const portfolioData = {
       skills: [
         { name: 'C', icon: 'c' },
         { name: 'Java', icon: 'java' },
+        { name: 'Python', icon: 'python' },
         { name: 'Data Structures and Algorithms', icon: 'dsa' },
         { name: 'Object-Oriented Programming', icon: 'oop' },
         { name: 'Problem Solving', icon: 'problemSolving' },
@@ -166,6 +171,8 @@ export const portfolioData = {
         { name: 'GitHub', icon: 'github' },
         { name: 'VS Code', icon: 'vscode' },
         { name: 'Postman', icon: 'postman' },
+        { name: 'Docker', icon: 'docker' },
+        { name: 'Web Socket', icon: 'socket' },
       ],
     },
   ] as SkillCategory[],
@@ -243,9 +250,9 @@ export const portfolioData = {
         'Instant RSVP capture with real-time Google Sheets backend sync',
         'Interactive event itinerary with venue maps and ceremony timings',
       ],
-      image: '/src/assets/images/wedding_invite_preview_1794064560189.jpg',
-      demoUrl: '#',
-      githubUrl: 'https://github.com/ayan-roy/wedding-invitation-app',
+      image: wedding,
+      demoUrl: 'https://shubho-bibaho-rho.vercel.app/',
+      githubUrl: 'https://github.com/Ayanroy004/Shubho-Bibaho',
       category: 'Frontend',
     },
     {
@@ -263,9 +270,9 @@ export const portfolioData = {
         'Interactive web dashboard displaying real-time confidence distributions',
         'Comparative evaluation analytics and model performance reporting',
       ],
-      image: '/src/assets/images/emotion_ai_preview_1794064563010.jpg',
-      demoUrl: '#',
-      githubUrl: 'https://github.com/ayan-roy/emotion-classification',
+      image: emotion,
+      demoUrl: 'https://sentiment-analysis-emotion-project.streamlit.app',
+      githubUrl: 'https://github.com/Ayanroy004/Sentiment-Analysis-Streamlit',
       category: 'Machine Learning',
     },
     {
